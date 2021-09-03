@@ -18,7 +18,7 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 1. Clone repository: 
 ```sh
-  $ git clone https://github.com/SamroodAli/books-library.git
+  $ git clone https://github.com/SamroodAli/react-calculator.git
 
 ```
 2. Change directory inside project
@@ -68,7 +68,7 @@ This command runs the linters for the project
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/SamroodAli/react-calculator/issues).
 
 ## Show your support
 
