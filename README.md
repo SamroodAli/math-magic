@@ -53,6 +53,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 
+### `npm run linters`
+This command runs the linters for the project
+
 ## Author
 
 ![Samrood Ali's GitHub stats](https://github-readme-stats.vercel.app/api?username=SamroodAli&count_private=true&theme=dark&show_icons=true)
