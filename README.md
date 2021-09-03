@@ -6,7 +6,7 @@ A calculator app build with create-react-app.
 - React using create-react-app
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[heroku link](https://samrood-calculator.herokuapp.com/)
 
 ## Getting Started
 
