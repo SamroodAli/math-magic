@@ -1,9 +1,10 @@
 import React from 'react';
+import Display from './Display';
 
 class App extends React.PureComponent {
   render() {
     return (
-      <h1>Hello world</h1>
+      <Display />
     );
   }
 }
