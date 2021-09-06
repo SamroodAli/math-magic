@@ -14,14 +14,21 @@ class App extends React.Component {
   }
 
   handleClick = (buttonName) => {
-    this.setState((prevState) => calculate(prevState), buttonName);
+    this.setState((prevState) => calculate({ prevState }, buttonName));
   }
 
-  render = (
-    <>
-      <Display />
-      <ButtonPanel />
-    </>
-  )
+  render = () => {
+    const { next, total, operation } = this.state;
+    return (
+      <>
+        <div>
+          {total}
+          {operation}
+        </div>
+        <Display result={next} />
+        <ButtonPanel />
+      </>
+    );
+  }
 }
 export default App;
