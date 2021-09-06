@@ -12,7 +12,7 @@ const calculate = (data, button) => {
 
   return {
     total: result,
-    next: nextOptions[button] || result,
+    next: String(nextOptions[button] || result),
     operation: button,
   };
 };

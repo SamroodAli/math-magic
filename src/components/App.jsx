@@ -4,29 +4,43 @@ import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      total: null,
-      next: null,
-      operation: null,
+      total: '0',
+      next: '0',
+      operation: '',
+      clear: true,
     };
   }
 
-  handleClick = (buttonName) => {
-    this.setState((prevState) => calculate({ prevState }, buttonName));
+  onNumberClick = (num) => {
+    const { clear } = this.state;
+    this.setState(
+      (prev) => {
+        if (clear) {
+          return { next: num, clear: false };
+        }
+        return { next: prev.next + num };
+      },
+    );
+  }
+
+  onOperationClick = (buttonName) => {
+    this.setState((prevState) => {
+      const newState = calculate(prevState, buttonName);
+      newState.clear = true;
+      return newState;
+    });
   }
 
   render = () => {
     const { next, total, operation } = this.state;
     return (
       <>
-        <div>
-          {total}
-          {operation}
-        </div>
-        <Display result={next} />
-        <ButtonPanel onClick={this.handleClick} />
+
+        <Display result={next} operation={operation} total={total} />
+        <ButtonPanel onOperationClick={this.onOperationClick} onNumberClick={this.onNumberClick} />
       </>
     );
   }
