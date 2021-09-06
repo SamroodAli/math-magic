@@ -1,4 +1,4 @@
-import operate from './operate.mjs';
+import operate from './operate';
 
 const calculate = (data, button) => {
   const { total, next, operation } = data;
