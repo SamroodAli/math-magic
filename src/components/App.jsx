@@ -26,7 +26,7 @@ class App extends React.Component {
           {operation}
         </div>
         <Display result={next} />
-        <ButtonPanel />
+        <ButtonPanel onClick={this.handleClick} />
       </>
     );
   }
