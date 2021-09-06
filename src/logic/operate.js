@@ -1,4 +1,4 @@
-// import Big from 'big.js';
+import Big from 'big.js';
 
 const add = (num1, num2) => Number(num1) + Number(num2);
 const subtract = (num1, num2) => num1 - num2;
@@ -22,7 +22,7 @@ const operations = {
 
 const operate = (num1 = 0, num2 = 0, operation) => {
   const currentOperation = operations[operation];
-  return currentOperation(num1, num2);
+  return currentOperation(new Big(num1), new Big(num2));
 };
 
 export default operate;

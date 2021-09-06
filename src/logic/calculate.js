@@ -1,6 +1,10 @@
 import operate from './operate';
 
 const calculate = (data, button) => {
+  if (button === 'AC') {
+    return { total: 0, next: 0, operation: '' };
+  }
+
   const { total, next, operation } = data;
 
   const result = Number(operate(total, next, operation || '='));

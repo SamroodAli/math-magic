@@ -2,22 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Display extends React.PureComponent {
+  text = (value, text) => <p>{`${text}: ${value}`}</p>
+
   render() {
     const { result, total, operation } = this.props;
     return (
       <>
-        <div>
-          Total:
-          {total}
-        </div>
-        <div>
-          Operation:
-          {operation}
-        </div>
-        <div>
-          Result:
-          {result}
-        </div>
+        {this.text(total, 'Total')}
+        {this.text(operation)}
+        {this.text(result, 'Result:')}
       </>
     );
   }
