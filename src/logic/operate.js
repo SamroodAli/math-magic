@@ -6,7 +6,7 @@ const multiply = (num1, num2) => num1 * num2;
 const divide = (num1, num2) => num1 / num2;
 const inverse = (num1) => num1 * -1;
 
-const operations = {
+export const operations = {
   '+': add,
   '-': subtract,
   x: multiply,
