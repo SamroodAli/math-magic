@@ -13,6 +13,6 @@ const operations = {
   '÷': divide,
   '+/-': inverse,
 };
-const operate = (num1, num2, operation) => Big(1);
+const operate = (num1, num2, operation) => operations[operation](Big(num1), Big(num2));
 
 export default operate;
