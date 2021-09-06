@@ -3,31 +3,32 @@ import Button from './Button';
 
 class ButtonPanel extends React.PureComponent {
   render() {
+    const { onClick } = this.props;
     return (
       <>
         <div>
-          <Button name="AC" />
-          <Button name="+/-" />
-          <Button name="%" />
-          <Button name="÷" />
+          <Button onClick={onClick} name="AC" />
+          <Button onClick={onClick} name="+/-" />
+          <Button onClick={onClick} name="%" />
+          <Button onClick={onClick} name="÷" />
         </div>
         <div>
-          <Button name="7" />
-          <Button name="8" />
-          <Button name="9" />
-          <Button name="x" />
+          <Button onClick={onClick} name="7" />
+          <Button onClick={onClick} name="8" />
+          <Button onClick={onClick} name="9" />
+          <Button onClick={onClick} name="x" />
         </div>
         <div>
-          <Button name="4" />
-          <Button name="5" />
-          <Button name="6" />
-          <Button name="-" />
+          <Button onClick={onClick} name="4" />
+          <Button onClick={onClick} name="5" />
+          <Button onClick={onClick} name="6" />
+          <Button onClick={onClick} name="-" />
         </div>
         <div>
-          <Button name="1" />
-          <Button name="2" />
-          <Button name="3" />
-          <Button name="+" />
+          <Button onClick={onClick} name="1" />
+          <Button onClick={onClick} name="2" />
+          <Button onClick={onClick} name="3" />
+          <Button onClick={onClick} name="+" />
         </div>
         <div>
           <Button name="0" />
