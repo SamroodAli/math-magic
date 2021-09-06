@@ -7,7 +7,7 @@ const calculate = (data, button) => {
 
   const { total, next, operation } = data;
 
-  const result = Number(operate(total, next, operation || '='));
+  const result = operate(total, next, operation || '=');
 
   const nextOptions = {
     '+/-': next * -1,
