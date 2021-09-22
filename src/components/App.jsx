@@ -16,15 +16,13 @@ class App extends React.Component {
 
   onNumberClick = (num) => {
     const { clear } = this.state;
-    this.setState(
-      (prev) => {
-        if (clear) {
-          return { next: num, clear: false };
-        }
-        return { next: prev.next + num };
-      },
-    );
-  }
+    this.setState((prev) => {
+      if (clear) {
+        return { next: num, clear: false };
+      }
+      return { next: prev.next + num };
+    });
+  };
 
   onOperationClick = (buttonName) => {
     this.setState((prevState) => {
@@ -32,17 +30,26 @@ class App extends React.Component {
       newState.clear = true;
       return newState;
     });
-  }
+  };
 
   render = () => {
     const { next, total, operation } = this.state;
     return (
       <>
-
-        <Display result={next} operation={operation} total={total} />
-        <ButtonPanel onOperationClick={this.onOperationClick} onNumberClick={this.onNumberClick} />
+        <Display
+          result={next}
+          operation={operation}
+          total={total}
+          data-testid="display"
+        />
+        <ButtonPanel
+          onOperationClick={this.onOperationClick}
+          onNumberClick={this.onNumberClick}
+          data-testid="buttonPanel"
+        />
       </>
     );
-  }
+  };
 }
+
 export default App;
