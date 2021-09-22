@@ -45,7 +45,7 @@ class App extends React.Component {
         <ButtonPanel
           onOperationClick={this.onOperationClick}
           onNumberClick={this.onNumberClick}
-          data-testid="buttonPanel"
+          data-testid="button"
         />
       </>
     );

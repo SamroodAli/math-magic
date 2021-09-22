@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display panel displays all calculator buttons 1`] = `
+<div
+  data-testid="display"
+>
+  <p>
+    Total: 100
+  </p>
+  <p>
+    undefined: +
+  </p>
+  <p>
+    Result:: 10
+  </p>
+</div>
+`;

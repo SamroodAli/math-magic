@@ -2,15 +2,19 @@
 
 exports[`Button snapshot testing 1`] = `
 Array [
-  <p>
-    Total: 0
-  </p>,
-  <p>
-    undefined: 
-  </p>,
-  <p>
-    Result:: 0
-  </p>,
+  <div
+    data-testid="display"
+  >
+    <p>
+      Total: 0
+    </p>
+    <p>
+      undefined: 
+    </p>
+    <p>
+      Result:: 0
+    </p>
+  </div>,
   <div>
     <button
       data-testid="button"
