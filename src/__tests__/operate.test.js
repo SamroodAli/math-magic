@@ -1,11 +1,3 @@
-// const add = (num1, num2) => num1.plus(num2);
-// const subtract = (num1, num2) => num1.minus(num2);
-// const multiply = (num1, num2) => num1.times(num2);
-// const divide = (num1, num2) => num1.div(num2);
-// const result = (num1, num2) => num2;
-// const inverse = (num1) => num1.times(-1);
-// const modifier = (num1) => num1.div(100);
-// const clear = () => 0;
 import Big from 'big.js';
 
 import {
@@ -48,4 +40,31 @@ test('divide functions divides two numbers', () => {
   const expected = new Big(2);
   const actual = divide(num1, num2);
   expect(actual).toEqual(expected);
+});
+
+test('divide functions divides two numbers', () => {
+  const num1 = new Big(20);
+  const num2 = new Big(10);
+  const expected = new Big(2);
+  const actual = divide(num1, num2);
+  expect(actual).toEqual(expected);
+});
+
+test('inverse changes the sign of the number', () => {
+  const num1 = new Big(10);
+  const expected = new Big(-10);
+  const actual = inverse(num1);
+  expect(actual).toEqual(expected);
+});
+
+test('modifier divides the number by 100', () => {
+  const num1 = new Big(100);
+  const expected = new Big(1);
+  const actual = modifier(num1);
+  expect(actual).toEqual(expected);
+});
+
+test('clear function returns 0', () => {
+  const actual = clear(10, 20);
+  expect(actual).toEqual(0);
 });
