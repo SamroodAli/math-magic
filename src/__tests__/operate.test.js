@@ -1,6 +1,6 @@
 import Big from 'big.js';
 
-import {
+import operate, {
   add,
   subtract,
   multiply,
@@ -67,4 +67,13 @@ test('modifier divides the number by 100', () => {
 test('clear function returns 0', () => {
   const actual = clear(10, 20);
   expect(actual).toEqual(0);
+});
+
+test('operate function returns result from one of the operations', () => {
+  const num1 = new Big(10);
+  const num2 = new Big(20);
+  const operation = '+';
+  const actual = operate(num1, num2, operation);
+  const expected = new Big(30);
+  expect(actual).toEqual(expected);
 });
