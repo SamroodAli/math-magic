@@ -25,3 +25,27 @@ test('Add functions sum of two numbers', () => {
   const actual = add(num1, num2);
   expect(actual).toEqual(expected);
 });
+
+test('substract functions subtracts two numbers', () => {
+  const num1 = new Big(20);
+  const num2 = new Big(10);
+  const expected = new Big(10);
+  const actual = subtract(num1, num2);
+  expect(actual).toEqual(expected);
+});
+
+test('substract functions subtracts two numbers', () => {
+  const num1 = new Big(20);
+  const num2 = new Big(10);
+  const expected = new Big(200);
+  const actual = multiply(num1, num2);
+  expect(actual).toEqual(expected);
+});
+
+test('divide functions divides two numbers', () => {
+  const num1 = new Big(20);
+  const num2 = new Big(10);
+  const expected = new Big(2);
+  const actual = divide(num1, num2);
+  expect(actual).toEqual(expected);
+});
