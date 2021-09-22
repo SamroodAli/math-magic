@@ -8,33 +8,33 @@ class ButtonPanel extends React.PureComponent {
     return (
       <>
         <div>
-          <Button onClick={onOperationClick} name="AC" />
-          <Button onClick={onOperationClick} name="+/-" />
-          <Button onClick={onOperationClick} name="%" />
-          <Button onClick={onOperationClick} name="÷" />
+          <Button onClick={onOperationClick} name="AC" data-testid="button" />
+          <Button onClick={onOperationClick} name="+/-" data-testid="button" />
+          <Button onClick={onOperationClick} name="%" data-testid="button" />
+          <Button onClick={onOperationClick} name="÷" data-testid="button" />
         </div>
         <div>
-          <Button onClick={onNumberClick} name="7" />
-          <Button onClick={onNumberClick} name="8" />
-          <Button onClick={onNumberClick} name="9" />
-          <Button onClick={onOperationClick} name="x" />
+          <Button onClick={onNumberClick} name="7" data-testid="button" />
+          <Button onClick={onNumberClick} name="8" data-testid="button" />
+          <Button onClick={onNumberClick} name="9" data-testid="button" />
+          <Button onClick={onOperationClick} name="x" data-testid="button" />
         </div>
         <div>
-          <Button onClick={onNumberClick} name="4" />
-          <Button onClick={onNumberClick} name="5" />
-          <Button onClick={onNumberClick} name="6" />
-          <Button onClick={onOperationClick} name="-" />
+          <Button onClick={onNumberClick} name="4" data-testid="button" />
+          <Button onClick={onNumberClick} name="5" data-testid="button" />
+          <Button onClick={onNumberClick} name="6" data-testid="button" />
+          <Button onClick={onOperationClick} name="-" data-testid="button" />
         </div>
         <div>
-          <Button onClick={onNumberClick} name="1" />
-          <Button onClick={onNumberClick} name="2" />
-          <Button onClick={onNumberClick} name="3" />
-          <Button onClick={onOperationClick} name="+" />
+          <Button onClick={onNumberClick} name="1" data-testid="button" />
+          <Button onClick={onNumberClick} name="2" data-testid="button" />
+          <Button onClick={onNumberClick} name="3" data-testid="button" />
+          <Button onClick={onOperationClick} name="+" data-testid="button" />
         </div>
         <div>
-          <Button onClick={onNumberClick} name="0" />
-          <Button onClick={onNumberClick} name="." />
-          <Button onClick={onOperationClick} name="=" />
+          <Button onClick={onNumberClick} name="0" data-testid="button" />
+          <Button onClick={onNumberClick} name="." data-testid="button" />
+          <Button onClick={onOperationClick} name="=" data-testid="button" />
         </div>
       </>
     );

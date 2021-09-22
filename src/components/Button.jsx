@@ -5,7 +5,7 @@ class Button extends React.PureComponent {
   render() {
     const { name, onClick } = this.props;
     return (
-      <button type="button" onClick={() => onClick(name)}>{name}</button>
+      <button data-testid="button" type="button" onClick={() => onClick(name)}>{name}</button>
     );
   }
 }
