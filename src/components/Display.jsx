@@ -9,8 +9,8 @@ class Display extends React.PureComponent {
     return (
       <div data-testid="display">
         {this.text(total, 'Total')}
-        {this.text(operation)}
-        {this.text(result, 'Result:')}
+        {this.text(operation, 'Operation')}
+        {this.text(result, 'Result')}
       </div>
     );
   }

@@ -8,10 +8,10 @@ exports[`Display panel displays all calculator buttons 1`] = `
     Total: 100
   </p>
   <p>
-    undefined: +
+    Operation: +
   </p>
   <p>
-    Result:: 10
+    Result: 10
   </p>
 </div>
 `;
