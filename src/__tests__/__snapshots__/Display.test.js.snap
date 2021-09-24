@@ -5,12 +5,6 @@ exports[`Display panel displays all calculator buttons 1`] = `
   data-testid="display"
 >
   <p>
-    Total: 100
-  </p>
-  <p>
-    Operation: +
-  </p>
-  <p>
     Result: 10
   </p>
 </div>

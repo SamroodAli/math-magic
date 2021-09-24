@@ -57,6 +57,13 @@ test('inverse changes the sign of the number', () => {
   expect(actual).toEqual(expected);
 });
 
+test('division by zero does not result in an error', () => {
+  const num1 = new Big(10);
+  const num2 = 0;
+  const actual = divide(num1, num2);
+  expect(actual).not.toThrow();
+});
+
 test('modifier divides the number by 100', () => {
   const num1 = new Big(100);
   const expected = new Big(1);

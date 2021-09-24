@@ -6,12 +6,6 @@ Array [
     data-testid="display"
   >
     <p>
-      Total: 0
-    </p>
-    <p>
-      Operation: 
-    </p>
-    <p>
       Result: 0
     </p>
   </div>,

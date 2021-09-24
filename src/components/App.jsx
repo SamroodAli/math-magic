@@ -7,9 +7,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      total: '0',
       next: '0',
-      operation: '',
       clear: true,
     };
   }
@@ -33,15 +31,10 @@ class App extends React.Component {
   };
 
   render = () => {
-    const { next, total, operation } = this.state;
+    const { next } = this.state;
     return (
       <>
-        <Display
-          result={next}
-          operation={operation}
-          total={total}
-          data-testid="display"
-        />
+        <Display result={next} data-testid="display" />
         <ButtonPanel
           onOperationClick={this.onOperationClick}
           onNumberClick={this.onNumberClick}
