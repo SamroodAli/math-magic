@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import {
+  Button, Loader, Dimmer, Image, Container,
+} from 'semantic-ui-react';
+import useQuotes from '../hooks/quotes';
 
 const Quote = () => {
-  const [content, setContent] = useState({ quote: 'Loading', author: '' });
-
-  const getQuotes = async () => {
-    const { data } = await axios.get('https://random-math-quote-api.herokuapp.com/');
-    setContent(data);
-  };
-
-  useEffect(() => {
-    getQuotes();
-  }, []);
-
-  const { quote, author } = content;
+  const [quote, author, authorImg, getQuotes] = useQuotes();
   return (
-    <>
+    <Container>
+      <Button color="black" onClick={getQuotes}>
+        Next
+      </Button>
       <h2>Math Quotes</h2>
-      <p>{quote}</p>
+      <br />
+      {quote === 'Loading' ? (
+        <Dimmer active inverted>
+          <Loader />
+        </Dimmer>
+      ) : <p>{quote}</p>}
       <p>{author}</p>
-    </>
+      {authorImg && <Image circular src={authorImg} alt={author} centered />}
+    </Container>
   );
 };
 

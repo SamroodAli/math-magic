@@ -22,50 +22,49 @@ class App extends Component {
 
     return (
       <Router>
-        <header>
-          <Link to="/">
-            <h1>Math Magic</h1>
-          </Link>
-        </header>
-        <Grid>
-          <Grid.Column width={4}>
-            <Menu fluid vertical tabular>
-              <Link to="/">
+        <div className="ui center aligned container">
+          <header>
+            <Link to="/">
+              <h1 className="text-center">Math Magic</h1>
+            </Link>
+          </header>
+          <Grid>
+            <Grid.Column width={4}>
+              <Menu fluid vertical tabular>
                 <Menu.Item
+                  as={Link}
+                  to="/"
                   name="bio"
                   active={activeItem === 'bio'}
                   onClick={this.handleItemClick}
                 />
-              </Link>
-              <Link to="/calculator">
                 <Menu.Item
+                  as={Link}
+                  to="/calculator"
                   name="calculator"
                   active={activeItem === 'calculator'}
                   onClick={this.handleItemClick}
                 />
-              </Link>
-              <Link to="/quotes">
                 <Menu.Item
+                  as={Link}
+                  to="/quotes"
                   name="quotes"
                   active={activeItem === 'quotes'}
                   onClick={this.handleItemClick}
                 />
-              </Link>
-
-            </Menu>
-          </Grid.Column>
-
-          <Grid.Column stretched width={12}>
-            <Segment>
-
-              <Switch>
-                <Route path="/" component={Home} />
-                <Route path="/calculator" component={Calculator} />
-                <Route path="/quotes" component={Quotes} />
-              </Switch>
-            </Segment>
-          </Grid.Column>
-        </Grid>
+              </Menu>
+            </Grid.Column>
+            <Grid.Column stretched width={12}>
+              <Segment>
+                <Switch>
+                  <Route path="/calculator" component={Calculator} />
+                  <Route path="/quotes" component={Quotes} />
+                  <Route path="/" component={Home} />
+                </Switch>
+              </Segment>
+            </Grid.Column>
+          </Grid>
+        </div>
       </Router>
     );
   }

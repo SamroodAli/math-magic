@@ -2,6 +2,9 @@
 
 exports[`Button snapshot testing 1`] = `
 Array [
+  <h2>
+    Calculator
+  </h2>,
   <div
     data-testid="display"
   >
