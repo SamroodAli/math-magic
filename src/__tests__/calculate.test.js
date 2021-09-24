@@ -8,7 +8,7 @@ test('If button is AC, it return new state', () => {
     operation: '',
   };
   const actual = calculate(state, 'AC');
-  expect(actual).toEqual({ next: 0, operation: '', total: 0 });
+  expect(actual).toEqual({ next: '0', operation: '', total: 0 });
 });
 
 test('calculate function should return state for operations', () => {

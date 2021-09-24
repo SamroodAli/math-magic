@@ -28,7 +28,11 @@ const operations = {
 
 const operate = (num1 = 0, num2 = 0, operation) => {
   const currentOperation = operations[operation];
-  return currentOperation(new Big(+num1), new Big(+num2));
+  try {
+    return currentOperation(new Big(+num1), new Big(+num2));
+  } catch (e) {
+    return 0;
+  }
 };
 
 export default operate;

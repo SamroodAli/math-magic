@@ -84,3 +84,24 @@ test('operate function returns result from one of the operations', () => {
   const expected = new Big(30);
   expect(actual).toEqual(expected);
 });
+
+test('operate function should handle non number arguments', () => {
+  const num1 = 'Hello';
+  const num2 = 'World';
+  const operation = '+';
+  const actual = operate(num1, num2, operation);
+  const expected = 0;
+  expect(actual).toEqual(expected);
+});
+
+test('operate function should handle no numbers', () => {
+  const actual = operate();
+  const expected = 0;
+  expect(actual).toEqual(expected);
+});
+
+test('operate function should handle unavailale operation', () => {
+  const actual = operate(10, 20, 'hello');
+  const expected = 0;
+  expect(actual).toEqual(expected);
+});
