@@ -1,4 +1,5 @@
-import React from 'react';
+import React from
+  'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
@@ -34,6 +35,7 @@ class Calculator extends React.Component {
     const { next } = this.state;
     return (
       <>
+        <h2>Calculator</h2>
         <Display result={next} data-testid="display" />
         <ButtonPanel
           onOperationClick={this.onOperationClick}
