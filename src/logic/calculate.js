@@ -5,7 +5,7 @@ const calculate = (data, button) => {
     return { total: 0, next: 0, operation: '' };
   }
 
-  const { total, next, operation } = data;
+  const { total = 0, next, operation = '' } = data;
 
   const result = operate(total, next, operation || '=');
 
