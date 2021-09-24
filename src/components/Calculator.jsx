@@ -3,7 +3,7 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
-class App extends React.Component {
+class Calculator extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -45,4 +45,4 @@ class App extends React.Component {
   };
 }
 
-export default App;
+export default Calculator;
