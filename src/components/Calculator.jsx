@@ -3,7 +3,7 @@ import React from
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
-import './Calculator.css';
+import './style/Calculator.css';
 
 class Calculator extends React.Component {
   constructor() {

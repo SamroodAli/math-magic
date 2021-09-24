@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import './style/ButtonPanel.css';
 
 class ButtonPanel extends React.PureComponent {
   render() {
     const { onOperationClick, onNumberClick } = this.props;
     return (
-      <>
+      <div className="panel">
         <div>
           <Button onClick={onOperationClick} name="AC" data-testid="button" />
           <Button onClick={onOperationClick} name="+/-" data-testid="button" />
@@ -36,7 +37,7 @@ class ButtonPanel extends React.PureComponent {
           <Button onClick={onNumberClick} name="." data-testid="button" />
           <Button onClick={onOperationClick} name="=" data-testid="button" />
         </div>
-      </>
+      </div>
     );
   }
 }

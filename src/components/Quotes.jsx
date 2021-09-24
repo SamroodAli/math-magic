@@ -10,8 +10,8 @@ const Quote = () => {
   return (
     <Container>
       <Button animated onClick={getQuotes} color="black">
-        <Button.Content hidden>Next</Button.Content>
-        <Button.Content visible>
+        <Button.Content visible>Next</Button.Content>
+        <Button.Content hidden>
           <Icon name="arrow right" />
         </Button.Content>
       </Button>

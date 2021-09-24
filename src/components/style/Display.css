@@ -1,0 +1,9 @@
+.display {
+  height: 100px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
