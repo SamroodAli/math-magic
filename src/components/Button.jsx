@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style/Button.css';
 
 class Button extends React.PureComponent {
   render() {
     const { name, onClick } = this.props;
     return (
-      <button data-testid="button" type="button" onClick={() => onClick(name)}>{name}</button>
+      <button className="button" data-testid="button" type="button" onClick={() => onClick(name)}>{name}</button>
     );
   }
 }
