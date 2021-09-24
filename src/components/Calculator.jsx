@@ -3,6 +3,7 @@ import React from
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
+import './Calculator.css';
 
 class Calculator extends React.Component {
   constructor() {
@@ -34,15 +35,17 @@ class Calculator extends React.Component {
   render = () => {
     const { next } = this.state;
     return (
-      <div>
+      <>
         <h2>Calculator</h2>
-        <Display result={next} data-testid="display" />
-        <ButtonPanel
-          onOperationClick={this.onOperationClick}
-          onNumberClick={this.onNumberClick}
-          data-testid="button"
-        />
-      </div>
+        <div className="calculator">
+          <Display result={next} data-testid="display" />
+          <ButtonPanel
+            onOperationClick={this.onOperationClick}
+            onNumberClick={this.onNumberClick}
+            data-testid="button"
+          />
+        </div>
+      </>
     );
   };
 }
