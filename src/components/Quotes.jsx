@@ -1,14 +1,19 @@
+import React from 'react';
 import {
-  Button, Loader, Dimmer, Image, Container,
+  Button, Loader, Dimmer, Image, Container, Icon,
 } from 'semantic-ui-react';
 import useQuotes from '../hooks/quotes';
 
 const Quote = () => {
   const [quote, author, authorImg, getQuotes] = useQuotes();
+
   return (
     <Container>
-      <Button color="black" onClick={getQuotes}>
-        Next
+      <Button animated onClick={getQuotes} color="black">
+        <Button.Content hidden>Next</Button.Content>
+        <Button.Content visible>
+          <Icon name="arrow right" />
+        </Button.Content>
       </Button>
       <h2>Math Quotes</h2>
       <br />
