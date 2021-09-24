@@ -34,7 +34,7 @@ class Calculator extends React.Component {
   render = () => {
     const { next } = this.state;
     return (
-      <>
+      <div>
         <h2>Calculator</h2>
         <Display result={next} data-testid="display" />
         <ButtonPanel
@@ -42,7 +42,7 @@ class Calculator extends React.Component {
           onNumberClick={this.onNumberClick}
           data-testid="button"
         />
-      </>
+      </div>
     );
   };
 }
