@@ -24,7 +24,6 @@ class App extends React.Component {
 
   onOperationClick = (buttonName) => {
     this.setState((prevState) => {
-      console.log(prevState);
       const newState = calculate(prevState, buttonName);
       newState.clear = true;
       return newState;

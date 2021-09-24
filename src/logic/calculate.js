@@ -2,7 +2,7 @@ import operate from './operate';
 
 const calculate = (data, button) => {
   if (button === 'AC') {
-    return { total: 0, next: 0, operation: '' };
+    return { total: 0, next: '0', operation: '' };
   }
 
   const { total = 0, next, operation = '' } = data;

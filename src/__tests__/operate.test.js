@@ -61,7 +61,7 @@ test('division by zero does not result in an error', () => {
   const num1 = new Big(10);
   const num2 = 0;
   const actual = divide(num1, num2);
-  expect(actual).not.toThrow();
+  expect(actual).toBe(0);
 });
 
 test('modifier divides the number by 100', () => {
