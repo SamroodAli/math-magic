@@ -1,9 +1,11 @@
 # React calculator
+
 A calculator app build with create-react-app.
 
 ## Built With
 
 - React using create-react-app
+
 ## Live Demo
 
 [heroku link](https://samrood-calculator.herokuapp.com/)
@@ -13,23 +15,31 @@ A calculator app build with create-react-app.
 To get a local copy up and running follow these simple example steps.
 
 - A browser
-- Node js  ([install node](https://nodejs.org/en/download/))
+- Node js ([install node](https://nodejs.org/en/download/))
 
 ### Setup
-1. Clone repository: 
+
+1. Clone repository:
+
 ```sh
   $ git clone https://github.com/SamroodAli/react-calculator.git
 
 ```
+
 2. Change directory inside project
+
 ```sh
 cd react-calculator
 ```
-3. In your terminal, run 
+
+3. In your terminal, run
+
 ```sh
 npm i
 ```
+
 4. Deploy app to localhost
+
 ```
 npm start
 ```
@@ -54,6 +64,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 
 ### `npm run linters`
+
 This command runs the linters for the project
 
 ## Author
@@ -61,6 +72,7 @@ This command runs the linters for the project
 ![Samrood Ali's GitHub stats](https://github-readme-stats.vercel.app/api?username=SamroodAli&count_private=true&theme=dark&show_icons=true)
 
 👤 **Samrood Ali**
+
 - GitHub: [@githubhandle](https://github.com/SamroodAli)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/samrood-ali/)
 
@@ -82,6 +94,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/SamroodAli/react-calculator/blob/milestone-1/LICENSE) licensed.
-
-
+This project is [MIT](https://github.com/SamroodAli/react-calculator/blob/development/LICENSE) licensed.

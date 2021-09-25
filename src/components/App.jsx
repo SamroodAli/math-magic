@@ -1,48 +1,36 @@
-import React from 'react';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/calculate';
+import {
+  BrowserRouter as Router, Link,
+} from 'react-router-dom';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      total: '0',
-      next: '0',
-      operation: '',
-      clear: true,
-    };
-  }
+import React, { useState } from 'react';
+import { Grid } from 'semantic-ui-react';
+import NavMenu from './NavMenu';
+import Routes from './Routes';
+import './style/App.css';
 
-  onNumberClick = (num) => {
-    const { clear } = this.state;
-    this.setState(
-      (prev) => {
-        if (clear) {
-          return { next: num, clear: false };
-        }
-        return { next: prev.next + num };
-      },
-    );
-  }
+const App = () => {
+  const [activeItem, setActiveItem] = useState('Home');
+  const handleItemClick = (e, { name }) => setActiveItem(name);
 
-  onOperationClick = (buttonName) => {
-    this.setState((prevState) => {
-      const newState = calculate(prevState, buttonName);
-      newState.clear = true;
-      return newState;
-    });
-  }
+  return (
+    <Router>
+      <div className="ui center aligned container">
+        <header>
+          <Link to="/">
+            <h1 className="text-center" id="brand">Math Magic</h1>
+          </Link>
+        </header>
+        <Grid>
+          <Grid.Column width={4}>
+            <NavMenu activeItem={activeItem} handleItemClick={handleItemClick} />
+          </Grid.Column>
+          <Grid.Column stretched width={12}>
+            <Routes />
+          </Grid.Column>
+        </Grid>
+      </div>
+    </Router>
+  );
+};
 
-  render = () => {
-    const { next, total, operation } = this.state;
-    return (
-      <>
-
-        <Display result={next} operation={operation} total={total} />
-        <ButtonPanel onOperationClick={this.onOperationClick} onNumberClick={this.onNumberClick} />
-      </>
-    );
-  }
-}
 export default App;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display panel displays all calculator buttons 1`] = `
+<div
+  className="display"
+  data-testid="display"
+>
+  10
+</div>
+`;
