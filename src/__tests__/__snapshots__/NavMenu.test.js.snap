@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display panel displays all calculator buttons 1`] = `
+<div
+  className="ui fluid vertical tabular menu"
+>
+  <a
+    className="active item"
+    href="/"
+    onClick={[Function]}
+  >
+    Bio
+  </a>
+  <a
+    className="item"
+    href="/calculator"
+    onClick={[Function]}
+  >
+    Calculator
+  </a>
+  <a
+    className="item"
+    href="/quotes"
+    onClick={[Function]}
+  >
+    Quotes
+  </a>
+</div>
+`;
