@@ -3,6 +3,11 @@
 exports[`NavMenu displays all items as shown in snapshot 1`] = `
 <div
   className="ui fluid vertical tabular menu"
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
 >
   <a
     className="active item"

@@ -3,7 +3,7 @@ import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 const NavMenu = ({ activeItem, handleItemClick }) => (
-  <Menu fluid vertical tabular>
+  <Menu fluid vertical tabular style={{ height: '100vh' }}>
     <Menu.Item
       as={Link}
       to="/"

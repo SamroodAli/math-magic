@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import { Grid } from 'semantic-ui-react';
 import NavMenu from './NavMenu';
 import Routes from './Routes';
+import './style/App.css';
 
 const App = () => {
   const [activeItem, setActiveItem] = useState('bio');
@@ -16,7 +17,7 @@ const App = () => {
       <div className="ui center aligned container">
         <header>
           <Link to="/">
-            <h1 className="text-center">Math Magic</h1>
+            <h1 className="text-center" id="brand">Math Magic</h1>
           </Link>
         </header>
         <Grid>
