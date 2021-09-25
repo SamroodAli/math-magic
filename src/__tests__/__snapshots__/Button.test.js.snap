@@ -2,6 +2,7 @@
 
 exports[`Button snapshot testing 1`] = `
 <button
+  className="button"
   data-testid="button"
   onClick={[Function]}
   type="button"

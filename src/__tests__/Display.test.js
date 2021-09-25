@@ -15,6 +15,6 @@ test('Display component renders div with test-id display', async () => {
 
 test('Display component shows total on screen', () => {
   render(<Display result="10" />);
-  const total = screen.getAllByText('Result: 10');
+  const total = screen.getAllByText('10');
   expect(total).toBeDefined();
 });

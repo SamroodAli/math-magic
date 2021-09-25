@@ -2,10 +2,9 @@
 
 exports[`Display panel displays all calculator buttons 1`] = `
 <div
+  className="display"
   data-testid="display"
 >
-  <p>
-    Result: 10
-  </p>
+  10
 </div>
 `;
