@@ -1,29 +1,26 @@
 import React from 'react';
 import {
-  Button, Loader, Dimmer, Image, Container, Icon,
+  Button, Image, Container, Icon,
 } from 'semantic-ui-react';
 import useQuotes from '../hooks/quotes';
+import Content from './quoteContent';
 
 const Quote = () => {
   const [quote, author, authorImg, getQuotes] = useQuotes();
 
   return (
     <Container>
-      <Button animated onClick={getQuotes} color="black">
+      <h2>Math Quotes</h2>
+      <div style={{ height: '400px' }}>
+        {authorImg && <Image height="400px" circular src={authorImg} alt={author} centered />}
+      </div>
+      <Button animated onClick={getQuotes} style={{ margin: '1rem' }} color="black">
         <Button.Content visible>Next</Button.Content>
         <Button.Content hidden>
           <Icon name="arrow right" />
         </Button.Content>
       </Button>
-      <h2>Math Quotes</h2>
-      <br />
-      {quote === 'Loading' ? (
-        <Dimmer active inverted>
-          <Loader />
-        </Dimmer>
-      ) : <p>{quote}</p>}
-      <p>{author}</p>
-      {authorImg && <Image circular src={authorImg} alt={author} centered />}
+      <Content quote={quote} author={author} />
     </Container>
   );
 };

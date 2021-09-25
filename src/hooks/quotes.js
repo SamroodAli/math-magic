@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import defaultImg from '../assets/default.jpg';
 
 const useQuotes = () => {
   const [quote, setQuote] = useState('Loading');
@@ -23,7 +24,7 @@ const useQuotes = () => {
       const pageInfo = Object.values(pageData)[0];
       setAuthorImg(pageInfo.thumbnail.source);
     } catch (e) {
-      setAuthorImg('');
+      setAuthorImg(defaultImg);
     }
   };
 
