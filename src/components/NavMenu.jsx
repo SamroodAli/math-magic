@@ -32,3 +32,5 @@ NavMenu.propTypes = {
   activeItem: PropTypes.string.isRequired,
   handleItemClick: PropTypes.func.isRequired,
 };
+
+export default NavMenu;
