@@ -9,7 +9,7 @@ import Routes from './Routes';
 import './style/App.css';
 
 const App = () => {
-  const [activeItem, setActiveItem] = useState('bio');
+  const [activeItem, setActiveItem] = useState('Home');
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (

@@ -7,22 +7,22 @@ const NavMenu = ({ activeItem, handleItemClick }) => (
     <Menu.Item
       as={Link}
       to="/"
-      name="bio"
-      active={activeItem === 'bio'}
+      name="Home"
+      active={activeItem === 'Home'}
       onClick={handleItemClick}
     />
     <Menu.Item
       as={Link}
       to="/calculator"
-      name="calculator"
-      active={activeItem === 'calculator'}
+      name="Calculator"
+      active={activeItem === 'Calculator'}
       onClick={handleItemClick}
     />
     <Menu.Item
       as={Link}
       to="/quotes"
-      name="quotes"
-      active={activeItem === 'quotes'}
+      name="Quotes"
+      active={activeItem === 'Quotes'}
       onClick={handleItemClick}
     />
   </Menu>
