@@ -1,11 +1,9 @@
 import operate from './operate';
 
-const calculate = (data, button) => {
+const calculate = (next, total, operation, button) => {
   if (button === 'AC') {
     return { total: 0, next: '0', operation: '' };
   }
-
-  const { total = 0, next, operation = '' } = data;
 
   const result = operate(total, next, operation || '=');
 

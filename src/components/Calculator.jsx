@@ -1,52 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import './style/Calculator.css';
 
-class Calculator extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      next: '0',
-      clear: true,
-    };
-  }
+const Calculator = () => {
+  const [next, setNext] = useState('0');
+  const [total, setTotal] = useState('0');
+  const [operation, setOperation] = useState('');
+  const [clear, setClear] = useState(true);
 
-  onNumberClick = (num) => {
-    const { clear } = this.state;
-    this.setState((prev) => {
-      if (clear) {
-        return { next: num, clear: false };
-      }
-      return { next: prev.next + num };
-    });
+  const onNumberClick = (num) => {
+    if (clear) {
+      setNext(num);
+      setClear(false);
+    } else {
+      setNext(next + String(num));
+    }
   };
 
-  onOperationClick = (buttonName) => {
-    this.setState((prevState) => {
-      const newState = calculate(prevState, buttonName);
-      newState.clear = true;
-      return newState;
-    });
+  const onOperationClick = (buttonName) => {
+    const newState = calculate(next, total, operation, buttonName);
+    setNext(newState.next);
+    setTotal(newState.total);
+    setOperation(newState.operation);
+    setClear(true);
   };
 
-  render = () => {
-    const { next } = this.state;
-    return (
-      <>
-        <h2>Calculator</h2>
-        <div className="calculator">
-          <Display result={next} data-testid="display" />
-          <ButtonPanel
-            onOperationClick={this.onOperationClick}
-            onNumberClick={this.onNumberClick}
-            data-testid="button"
-          />
-        </div>
-      </>
-    );
-  };
-}
+  return (
+    <>
+      <h2>Calculator</h2>
+      <div className="calculator">
+        <Display result={next} data-testid="display" />
+        <ButtonPanel
+          onOperationClick={onOperationClick}
+          onNumberClick={onNumberClick}
+          data-testid="button"
+        />
+      </div>
+    </>
+  );
+};
 
 export default Calculator;
