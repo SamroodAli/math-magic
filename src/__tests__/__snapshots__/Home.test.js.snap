@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Display panel displays all calculator buttons 1`] = `
+exports[`Home displays markup as shown in snapshot 1`] = `
 <h1>
   Welcome to Math Magic
 </h1>

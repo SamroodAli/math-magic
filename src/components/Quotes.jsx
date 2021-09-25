@@ -3,7 +3,7 @@ import {
   Button, Image, Container, Icon,
 } from 'semantic-ui-react';
 import useQuotes from '../hooks/quotes';
-import Content from './quoteContent';
+import Content from './Content';
 
 const Quote = () => {
   const [quote, author, authorImg, getQuotes] = useQuotes();

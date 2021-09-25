@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content snapshot testing 1`] = `
+Array [
+  <h3
+    data-testid="quote"
+  >
+    lorem ipsum
+  </h3>,
+  <h4
+    data-testid="author"
+  >
+    lorem
+  </h4>,
+]
+`;
