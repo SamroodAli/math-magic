@@ -3,7 +3,8 @@ import {
 } from 'react-router-dom';
 
 import React, { Component } from 'react';
-import { Grid, Menu, Segment } from 'semantic-ui-react';
+import { Grid, Segment } from 'semantic-ui-react';
+import NavMenu from './NavMenu';
 import Calculator from './Calculator';
 import Quotes from './Quotes';
 import Home from './Home';
@@ -29,31 +30,8 @@ class App extends Component {
             </Link>
           </header>
           <Grid>
-            <Grid.Column width={4}>
-              <Menu fluid vertical tabular>
-                <Menu.Item
-                  as={Link}
-                  to="/"
-                  name="bio"
-                  active={activeItem === 'bio'}
-                  onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                  as={Link}
-                  to="/calculator"
-                  name="calculator"
-                  active={activeItem === 'calculator'}
-                  onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                  as={Link}
-                  to="/quotes"
-                  name="quotes"
-                  active={activeItem === 'quotes'}
-                  onClick={this.handleItemClick}
-                />
-              </Menu>
-            </Grid.Column>
+            <Grid.Column width={4} />
+            <NavMenu activeItem={activeItem} handleItemClick={this.handleItemClick} />
             <Grid.Column stretched width={12}>
               <Segment>
                 <Switch>
