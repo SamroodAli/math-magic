@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
@@ -26,3 +27,8 @@ const NavMenu = ({ activeItem, handleItemClick }) => (
     />
   </Menu>
 );
+
+NavMenu.propTypes = {
+  activeItem: PropTypes.string.isRequired,
+  handleItemClick: PropTypes.func.isRequired,
+};
