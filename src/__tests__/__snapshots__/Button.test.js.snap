@@ -5,6 +5,12 @@ exports[`Button snapshot testing 1`] = `
   className="button"
   data-testid="button"
   onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "orange",
+      "width": "25%",
+    }
+  }
   type="button"
 >
   1

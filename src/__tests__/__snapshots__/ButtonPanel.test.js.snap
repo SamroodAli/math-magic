@@ -9,6 +9,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       AC
@@ -17,6 +23,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       +/-
@@ -25,6 +37,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       %
@@ -33,6 +51,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "orange",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       ÷
@@ -43,6 +67,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       7
@@ -51,6 +81,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       8
@@ -59,6 +95,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       9
@@ -67,6 +109,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "orange",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       x
@@ -77,6 +125,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       4
@@ -85,6 +139,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       5
@@ -93,6 +153,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       6
@@ -101,6 +167,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "orange",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       -
@@ -111,6 +183,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       1
@@ -119,6 +197,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       2
@@ -127,6 +211,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       3
@@ -135,6 +225,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "orange",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       +
@@ -145,6 +241,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "50%",
+        }
+      }
       type="button"
     >
       0
@@ -153,6 +255,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E0E0E0",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       .
@@ -161,6 +269,12 @@ exports[`Button panel displays all calculator buttons 1`] = `
       className="button"
       data-testid="button"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "orange",
+          "width": "25%",
+        }
+      }
       type="button"
     >
       =
