@@ -17,26 +17,28 @@ const App = () => {
 
   return (
     <Router>
-      <div className="ui center aligned container">
-        <header>
-          <Link to="/">
-            <h1 className="text-center" id="brand">Math Magic</h1>
-          </Link>
-          <DarkModeToggle
-            onChange={setIsDark}
-            checked={isDark}
-            size={80}
-          />
-        </header>
-        <Grid>
-          <Grid.Column width={4}>
-            <NavMenu activeItem={activeItem} handleItemClick={handleItemClick} />
-          </Grid.Column>
-          <Grid.Column stretched width={12}>
-            <Routes />
-          </Grid.Column>
-        </Grid>
-      </div>
+      <ThemeContext.Provider value={isDark}>
+        <div className="ui center aligned container">
+          <header>
+            <Link to="/">
+              <h1 className="text-center" id="brand">Math Magic</h1>
+            </Link>
+            <DarkModeToggle
+              onChange={setIsDark}
+              checked={isDark}
+              size={80}
+            />
+          </header>
+          <Grid>
+            <Grid.Column width={4}>
+              <NavMenu activeItem={activeItem} handleItemClick={handleItemClick} />
+            </Grid.Column>
+            <Grid.Column stretched width={12}>
+              <Routes />
+            </Grid.Column>
+          </Grid>
+        </div>
+      </ThemeContext.Provider>
     </Router>
   );
 };
