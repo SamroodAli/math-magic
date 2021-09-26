@@ -29,11 +29,21 @@ const useQuotes = () => {
   };
 
   useEffect(() => {
-    getQuotes();
+    let isMounted = true;
+    if (isMounted) {
+      getQuotes();
+    }
+    return () => { isMounted = false; };
   }, []);
 
   useEffect(() => {
-    getAuthor();
+    let isMounted = true;
+    if (isMounted) {
+      getAuthor();
+    }
+    return () => {
+      isMounted = false;
+    };
   }, [author]);
 
   return [quote, author, authorImg, getQuotes];
