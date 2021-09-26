@@ -13,7 +13,7 @@ const useCalc = () => {
       setClear(false);
     } else {
       const nextNum = next + String(num);
-      if (nextNum.length <= 15) {
+      if (nextNum.length <= 20) {
         setNext(nextNum);
       }
     }
