@@ -15,7 +15,10 @@ const Calculator = () => {
       setNext(num);
       setClear(false);
     } else {
-      setNext(next + String(num));
+      const nextNum = next + String(num);
+      if (nextNum.length <= 15) {
+        setNext(nextNum);
+      }
     }
   };
 
