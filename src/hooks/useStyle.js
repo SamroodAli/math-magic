@@ -1,4 +1,14 @@
 import { useContext } from 'react';
 import ThemeContext from '../theme';
 
-export default () => useContext(ThemeContext);
+export const dark = { backgroundColor: '#0F3741', color: 'white' };
+export const light = { backgroundColor: 'white', color: 'black' };
+
+export default () => {
+  const [isDark, setIsDark] = useContext(ThemeContext);
+  const mainBackground = { backgroundColor: isDark ? '#282C34' : 'teal' };
+  const style = isDark ? dark : light;
+  return {
+    isDark, setIsDark, style, mainBackground,
+  };
+};
