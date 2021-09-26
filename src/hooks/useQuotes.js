@@ -6,12 +6,14 @@ const useQuotes = () => {
   const [quote, setQuote] = useState('Loading');
   const [author, setAuthor] = useState('');
   const [authorImg, setAuthorImg] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const getQuotes = async () => {
     setQuote('Loading');
     const { data } = await axios.get('https://random-math-quote-api.herokuapp.com/');
     setQuote(data.quote);
     setAuthor(data.author);
+    setLoading(false);
   };
 
   const fixAuthorName = (name) => name.split(' ').map((name) => name.charAt(0).toUpperCase() + name.slice(1)).join('_');
@@ -46,7 +48,13 @@ const useQuotes = () => {
     };
   }, [author]);
 
-  return [quote, author, authorImg, getQuotes];
+  return {
+    loading,
+    author,
+    authorImg,
+    quote,
+    getQuotes,
+  };
 };
 
 export default useQuotes;

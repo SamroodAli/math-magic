@@ -5,18 +5,12 @@ import Content from './Content';
 import Loader from './Loader';
 
 const Quote = () => {
-  const [quote, author, authorImg, getQuotes] = useQuotes();
-  const quoteArea = () => {
-    if (quote === 'Loading') {
-      return <Loader />;
-    }
-    return <Content quote={quote} author={author} authorImg={authorImg} getQuotes={getQuotes} />;
-  };
+  const { loading, ...quoteData } = useQuotes();
 
   return (
     <Container>
       <h2>Math Quotes</h2>
-      {quoteArea()}
+      {loading ? <Loader /> : <Content quoteData={quoteData} /> }
     </Container>
   );
 };
