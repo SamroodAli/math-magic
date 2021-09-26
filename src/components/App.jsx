@@ -7,13 +7,13 @@ import NavMenu from './NavMenu';
 import Routes from './Routes';
 import ThemeContext from '../theme';
 import useTheme from '../hooks/useTheme';
-import useStyle from '../hooks/useStyle';
 import useNavMenu from '../hooks/useNavMenu';
+
 import './style/App.css';
 
 const App = () => {
   const theme = useTheme();
-  const { style } = useStyle();
+  const { style } = theme;
   const [activeItem, setActiveItem] = useNavMenu();
 
   return (

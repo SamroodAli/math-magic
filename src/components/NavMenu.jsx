@@ -2,10 +2,11 @@ import PropTypes from 'prop-types';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import DarkModeToggle from 'react-dark-mode-toggle';
-import useStyles from '../hooks/useStyle';
+import { useContext } from 'react';
+import ThemeContext from '../theme';
 
 const NavMenu = ({ activeItem, handleItemClick }) => {
-  const { style, isDark, setIsDark } = useStyles();
+  const { style, isDark, setIsDark } = useContext(ThemeContext);
   return (
     <Menu fluid vertical tabular style={{ height: '100vh', ...style }}>
       <Menu.Item
