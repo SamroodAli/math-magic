@@ -14,6 +14,7 @@ import './style/App.css';
 const App = () => {
   const theme = useTheme();
   const { style } = theme;
+
   const [activeItem, setActiveItem] = useNavMenu();
 
   return (
