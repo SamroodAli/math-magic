@@ -7,7 +7,7 @@ import useStyles from '../hooks/useStyle';
 const NavMenu = ({ activeItem, handleItemClick }) => {
   const { style, isDark, setIsDark } = useStyles();
   return (
-    <Menu fluid vertical tabular style={{ height: '100vh', ...style }}>
+    <Menu fluid vertical tabular style={{ height: '90vh', ...style }}>
       <Menu.Item
         style={style}
         as={Link}
