@@ -3,13 +3,14 @@ import {
 } from 'react-router-dom';
 
 import React, { useState } from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Button } from 'semantic-ui-react';
 import NavMenu from './NavMenu';
 import Routes from './Routes';
 import './style/App.css';
 
 const App = () => {
   const [activeItem, setActiveItem] = useState('Home');
+  const [dark, setDark] = useState(false);
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   return (
@@ -19,6 +20,9 @@ const App = () => {
           <Link to="/">
             <h1 className="text-center" id="brand">Math Magic</h1>
           </Link>
+          <Button toggle active={dark} onClick={() => setDark(!dark)}>
+            Toggle
+          </Button>
         </header>
         <Grid>
           <Grid.Column width={4}>
