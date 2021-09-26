@@ -3,7 +3,7 @@ import { Button, Icon } from 'semantic-ui-react';
 import useStyle from '../hooks/useStyle';
 
 const NextButton = ({ onClick }) => {
-  const [mainBackground, textColor] = useStyle;
+  const { mainBackground, textColor } = useStyle();
   return (
     <Button animated onClick={onClick} style={{ margin: '1rem', ...mainBackground, ...textColor }}>
       <Button.Content visible>Next</Button.Content>
@@ -17,3 +17,5 @@ const NextButton = ({ onClick }) => {
 NextButton.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
+
+export default NextButton;

@@ -10,6 +10,7 @@ export default () => {
   const textColor = { color: isDark ? 'white' : '#1E3163' };
   const invertColor = { color: isDark ? 'black' : 'white' };
   const style = isDark ? dark : light;
+  console.log(mainBackground);
   return {
     isDark,
     setIsDark,

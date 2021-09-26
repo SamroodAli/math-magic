@@ -3,13 +3,13 @@ import axios from 'axios';
 import defaultImg from '../assets/default.jpg';
 
 const useQuotes = () => {
-  const [quote, setQuote] = useState('Loading');
+  const [quote, setQuote] = useState('');
   const [author, setAuthor] = useState('');
   const [authorImg, setAuthorImg] = useState('');
   const [loading, setLoading] = useState(true);
 
   const getQuotes = async () => {
-    setQuote('Loading');
+    setLoading(true);
     const { data } = await axios.get('https://random-math-quote-api.herokuapp.com/');
     setQuote(data.quote);
     setAuthor(data.author);
@@ -50,9 +50,9 @@ const useQuotes = () => {
 
   return {
     loading,
+    quote,
     author,
     authorImg,
-    quote,
     getQuotes,
   };
 };
