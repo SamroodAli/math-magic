@@ -1,26 +1,31 @@
-import { Dimmer, Loader } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import {
+  Button, Image, Icon,
+} from 'semantic-ui-react';
 
-const Content = ({ quote, author }) => {
-  if (quote === 'Loading') {
-    return (
-      <Dimmer active inverted data-testid="loader">
-        <Loader />
-      </Dimmer>
-    );
-  }
-  return (
-    <>
-      <h3 data-testid="quote">{quote}</h3>
-
-      <h4 data-testid="author">{author}</h4>
-    </>
-  );
-};
+const Content = ({
+  quote, author, authorImg, getQuotes,
+}) => (
+  <>
+    <div style={{ height: '400px' }}>
+      <Image height="400px" circular src={authorImg} alt={author} centered />
+    </div>
+    <Button animated onClick={getQuotes} style={{ margin: '1rem' }} color="black">
+      <Button.Content visible>Next</Button.Content>
+      <Button.Content hidden>
+        <Icon name="arrow right" />
+      </Button.Content>
+    </Button>
+    <h3 data-testid="quote">{quote}</h3>
+    <h4 data-testid="author">{author}</h4>
+  </>
+);
 
 Content.propTypes = {
   quote: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  authorImg: PropTypes.string.isRequired,
+  getQuotes: PropTypes.func.isRequired,
 };
 
 export default Content;

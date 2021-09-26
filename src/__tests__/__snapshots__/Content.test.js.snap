@@ -2,6 +2,43 @@
 
 exports[`Content snapshot testing 1`] = `
 Array [
+  <div
+    style={
+      Object {
+        "height": "400px",
+      }
+    }
+  >
+    <img
+      alt="lorem"
+      className="ui circular centered image"
+      height="400px"
+    />
+  </div>,
+  <button
+    className="ui black animated button"
+    onClick={[Function]}
+    style={
+      Object {
+        "margin": "1rem",
+      }
+    }
+  >
+    <div
+      className="visible content"
+    >
+      Next
+    </div>
+    <div
+      className="hidden content"
+    >
+      <i
+        aria-hidden="true"
+        className="arrow right icon"
+        onClick={[Function]}
+      />
+    </div>
+  </button>,
   <h3
     data-testid="quote"
   >
