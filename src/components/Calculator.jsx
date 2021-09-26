@@ -1,35 +1,10 @@
-import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/calculate';
 import './style/Calculator.css';
+import useCalc from '../hooks/useCalc';
 
 const Calculator = () => {
-  const [next, setNext] = useState('0');
-  const [total, setTotal] = useState('0');
-  const [operation, setOperation] = useState('');
-  const [clear, setClear] = useState(true);
-
-  const onNumberClick = (num) => {
-    if (clear) {
-      setNext(num);
-      setClear(false);
-    } else {
-      const nextNum = next + String(num);
-      if (nextNum.length <= 15) {
-        setNext(nextNum);
-      }
-    }
-  };
-
-  const onOperationClick = (buttonName) => {
-    const newState = calculate(next, total, operation, buttonName);
-    setNext(newState.next);
-    setTotal(newState.total);
-    setOperation(newState.operation);
-    setClear(true);
-  };
-
+  const { next, onOperationClick, onNumberClick } = useCalc();
   return (
     <>
       <h2>Calculator</h2>
