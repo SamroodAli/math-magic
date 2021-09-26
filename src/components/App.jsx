@@ -7,6 +7,7 @@ import { Grid } from 'semantic-ui-react';
 import DarkModeToggle from 'react-dark-mode-toggle';
 import NavMenu from './NavMenu';
 import Routes from './Routes';
+import ThemeContext from '../theme';
 import './style/App.css';
 
 const App = () => {
