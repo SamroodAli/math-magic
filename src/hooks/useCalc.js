@@ -26,7 +26,12 @@ const useCalc = () => {
     setOperation(newState.operation);
     setClear(true);
   };
-  return { next, onOperationClick, onNumberClick };
+  const isLarge = next.length > 20;
+  const result = next.length > 30 ? next.substring(0, 29) : next;
+
+  return {
+    result, isLarge, onOperationClick, onNumberClick,
+  };
 };
 
 export default useCalc;

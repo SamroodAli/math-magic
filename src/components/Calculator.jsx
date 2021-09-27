@@ -4,16 +4,15 @@ import './style/Calculator.css';
 import useCalc from '../hooks/useCalc';
 
 const Calculator = () => {
-  const { next, onOperationClick, onNumberClick } = useCalc();
-
-  const large = next.length > 20;
-  const result = next.length > 30 ? next.substring(0, 29) : next;
+  const {
+    result, isLarge, onOperationClick, onNumberClick,
+  } = useCalc();
 
   return (
     <>
       <h2>Calculator</h2>
       <div className="calculator">
-        <Display result={result} large={large} data-testid="display" />
+        <Display result={result} large={isLarge} data-testid="display" />
         <ButtonPanel
           onOperationClick={onOperationClick}
           onNumberClick={onNumberClick}
